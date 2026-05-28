@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/tanstack-react';
-import { Route } from '@/routes/index';
+import { Route } from '@/routes/(layout)';
 
 const meta = {
   title: 'Example/Page',
