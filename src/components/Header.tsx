@@ -1,5 +1,3 @@
 export default function Header() {
-  return (
-    <div>Hi from header</div>
-  )
+  return <header style={{ border: '2px solid #0f766e', padding: 12 }}>Root layout header rendered</header>
 }

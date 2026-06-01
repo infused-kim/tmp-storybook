@@ -1,24 +1,22 @@
 import {
-  HeadContent,
-  Scripts,
   createRootRoute,
   Outlet,
 } from '@tanstack/react-router';
+import Header from '@/components/Header';
 
 export const Route = createRootRoute({
-  shellComponent: RootDocument,
+  component: RootComponent,
 });
 
-function RootDocument() {
+function RootComponent() {
+  console.log('[storybook-tanstack-repro] __root Outlet source:', String(Outlet));
+
   return (
-    <html lang="en" suppressHydrationWarning>
-      <head>
-        <HeadContent />
-      </head>
-      <body className="font-sans antialiased [overflow-wrap:anywhere] selection:bg-[rgba(79,184,178,0.24)]">
+    <div style={{ border: '3px solid #2563eb', padding: 16 }}>
+      <Header />
+      <main style={{ border: '2px dashed #9333ea', marginTop: 16, padding: 16 }}>
         <Outlet />
-        <Scripts />
-      </body>
-    </html>
+      </main>
+    </div>
   );
 }
